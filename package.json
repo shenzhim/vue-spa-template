@@ -1,0 +1,8 @@
+{
+    "name": "vue-spa-template",
+    "version": "1.0.0",
+    "author": "shenzm <szmalq@163.com>",
+    "license": "MIT",
+    "description": "A template for spa project based on vue2.5 + vue-router + vuex + axios + webpack"
+  }
+  

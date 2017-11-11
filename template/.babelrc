@@ -1,0 +1,12 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "useBuiltIns": "entry",
+      "targets": {
+        "browsers": ["> 1%", "android >=4", "ios >=8", "not ie <= 8"]
+      }
+    }]
+  ],
+  "plugins": ["syntax-dynamic-import", ["transform-object-rest-spread", { "useBuiltIns": true }]]
+}

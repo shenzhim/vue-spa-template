@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="keywords" content="todo"/>
+    <meta name="description" content="todo"/>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <title>{{ name }}</title>
+    <script type="text/javascript">
+      (function(designWidth, rem2px) {
+        var dpr = window.devicePixelRatio || 1;
+        dpr = dpr == 4 ? 2 : dpr;
+
+        var scale = 1 / dpr,
+        metaEl = document.querySelector('meta[name="viewport"]');
+        metaEl.setAttribute('content', 'width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+
+        var h = document.getElementsByTagName('head')[0],
+            d = document.createElement('div');
+        d.style.width = '1rem';
+        d.style.display = "none";
+        h.appendChild(d);
+        var rootfs = parseFloat(getComputedStyle(d, null).getPropertyValue('width'));
+        var fn = function() {
+            document.documentElement.style.fontSize = document.documentElement.clientWidth / designWidth * rem2px / rootfs * 100 + '%';
+        }
+        fn();
+        window.addEventListener("orientationchange" in window ? "orientationchange" : "resize", fn, false);
+      })(1440, 100)
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
