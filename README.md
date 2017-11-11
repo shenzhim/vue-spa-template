@@ -18,7 +18,7 @@ $ npm run dev
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init shenzhim/vue-spa-template my-project
 $ cd my-project
 $ npm install
 $ npm run dev
