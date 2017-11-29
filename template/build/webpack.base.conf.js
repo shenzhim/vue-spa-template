@@ -2,6 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
+const WebPWebpackPlugin = require('webp-webpack-plugin')
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -58,5 +59,14 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new WebPWebpackPlugin({
+      match: /(jpe?g|png)$/,
+      limit: 5000,
+      webp: {
+        quality: 60
+      }
+    })
+  ]
 }

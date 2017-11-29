@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <img src="~@/assets/logo.png">
+        <img v-webp="require('../assets/logo.png')">
         <keep-alive>
             <router-view/>
         </keep-alive>
