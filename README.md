@@ -4,11 +4,11 @@
 
 ## Usage
 
-可使用 [vue-temp-cli]() 工具 快速创建生成基于此模版的spa项目
+可使用 [vue-tmpl-cli](https://github.com/shenzhim/vue-tmpl-cli) 工具 快速创建生成基于此模版的spa项目
 
 ``` bash
-$ npm install -g vue_temp_cli
-$ vue_temp init my-project
+$ npm install -g vue-tmpl-cli
+$ vue-tmpl init shenzhim/vue-spa-template my-project
 $ cd my-project
 $ npm install
 $ npm run dev
